@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Companies | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Logo -->
+            <a class="brand" href="dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <!-- Sidebar Navigation -->
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="candidates.html">Candidates</a>
+                <a href="companies.html" class="active">Companies</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="applications.html">Applications</a>
+                <a href="interviews.html">Interviews</a>
+                <a href="placement-process.html">Placement Process</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>
+                    Recruitment & Placement Management System
+                </span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">EMPLOYERS</p>
+
+                        <h1>Companies</h1>
+
+                        <p class="muted">
+                            Manage hiring partners and contacts.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Company Registration Form -->
+                <form id="companyForm" class="panel form-grid compact">
+
+                    <label>
+                        Company Name
+                        <input name="company_name" required>
+                    </label>
+
+                    <label>
+                        Industry
+                        <input name="industry" required>
+                    </label>
+
+                    <label>
+                        Website
+                        <input name="website" type="url">
+                    </label>
+
+                    <label>
+                        Location
+                        <input name="location">
+                    </label>
+
+                    <label>
+                        Company Type
+                        <select name="company_type">
+                            <option>MNC</option>
+                            <option>STARTUP</option>
+                            <option>MID_SIZE</option>
+                            <option>CONSULTANCY</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        HR Name
+                        <input name="hr_name">
+                    </label>
+
+                    <label>
+                        HR Email
+                        <input name="hr_email" type="email">
+                    </label>
+
+                    <label>
+                        HR Mobile
+                        <input name="hr_mobile">
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="btn primary">
+                            Add Company
+                        </button>
+                    </div>
+
+                    <div id="message" class="message full"></div>
+
+                </form>
+
+                <!-- Companies Table -->
+                <section class="panel">
+
+                    <div class="table-wrap">
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th>Industry</th>
+                                    <th>Location</th>
+                                    <th>Type</th>
+                                    <th>HR Contact</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="companyRows"></tbody>
+
+                        </table>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+</html>

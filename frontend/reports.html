@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Reports | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="brand" href="dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <nav>
+                <a href="dashboard.html" class="">Dashboard</a>
+                <a href="candidates.html" class="">Candidates</a>
+                <a href="companies.html" class="">Companies</a>
+                <a href="jobs.html" class="">Jobs</a>
+                <a href="applications.html" class="">Applications</a>
+                <a href="interviews.html" class="">Interviews</a>
+                <a href="placement-process.html" class="">Placement Process</a>
+                <a href="reports.html" class="active">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy<br>
+                <small>Recruitment & Placement</small>
+            </div>
+        </aside>
+
+        <main class="main-area">
+            <header class="topbar">
+                <button id="menuToggle" class="icon-btn">☰</button>
+                <span>Recruitment & Placement Management System</span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+                    <button id="logoutBtn" class="btn secondary small">Logout</button>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">ANALYTICS</p>
+                        <h1>Management Reports</h1>
+                        <p class="muted">Live summaries calculated from MySQL records.</p>
+                    </div>
+
+                    <div>
+                        <button class="btn secondary" onclick="window.print()">Print</button>
+                        <button class="btn secondary" id="exportCsv">Export CSV</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid" id="reportStats"></div>
+
+                <div class="content-grid">
+                    <section class="panel">
+                        <h2>Recruitment Funnel</h2>
+                        <div id="reportFunnel"></div>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Company-wise Placement</h2>
+                        <div id="companyPlacement"></div>
+                    </section>
+                </div>
+
+                <section class="panel">
+                    <h2>Pending Interviews</h2>
+                    <div id="pendingInterviews" class="table-wrap"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>

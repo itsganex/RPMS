@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Dashboard | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="page-content" style="max-width: 1200px; margin: 0 auto;">
+        <header class="topbar">
+            <a class="brand" href="student-dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+                <span>Student Portal</span>
+            </a>
+
+            <div class="user-menu">
+                <span id="studentName">Student</span>
+                <button id="logoutBtn" class="btn secondary small" type="button">Logout</button>
+            </div>
+        </header>
+
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">STUDENT PORTAL</p>
+                <h1>Welcome to your placement dashboard</h1>
+                <p class="muted">View your profile, explore openings and track your applications.</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>My Profile</h2>
+            </div>
+            <div id="profile" class="form-grid">
+                <p class="muted">Loading profile...</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>Available Jobs</h2>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Job title</th>
+                            <th>Location</th>
+                            <th>Package (LPA)</th>
+                            <th>Deadline</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jobRows">
+                        <tr>
+                            <td colspan="6">Loading jobs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="jobMessage" class="message" aria-live="polite"></div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-head">
+                <h2>My Applications</h2>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Application</th>
+                            <th>Company</th>
+                            <th>Job</th>
+                            <th>Status</th>
+                            <th>Applied on</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicationRows">
+                        <tr>
+                            <td colspan="5">Loading applications...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/student.js"></script>
+</body>
+
+</html>

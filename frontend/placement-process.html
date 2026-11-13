@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Placement Process | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Logo -->
+            <a class="brand" href="dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <!-- Sidebar Navigation -->
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="candidates.html">Candidates</a>
+                <a href="companies.html">Companies</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="applications.html">Applications</a>
+                <a href="interviews.html">Interviews</a>
+                <a href="placement-process.html" class="active">
+                    Placement Process
+                </a>
+                <a href="reports.html">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>
+                    Recruitment & Placement Management System
+                </span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">WORKFLOW</p>
+
+                        <h1>Placement Process</h1>
+
+                        <p class="muted">
+                            Interview feedback, offers and joining confirmation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interview Feedback and Create Offer -->
+                <div class="content-grid">
+
+                    <!-- Interview Feedback -->
+                    <form id="feedbackForm" class="panel form-grid compact">
+
+                        <h2 class="full">Interview Feedback</h2>
+
+                        <label>
+                            Interview ID
+                            <input name="interview_id" type="number" required>
+                        </label>
+
+                        <label>
+                            Technical Rating
+                            <input name="technical_rating" type="number"
+                                min="0" max="10" step=".1">
+                        </label>
+
+                        <label>
+                            Communication Rating
+                            <input name="communication_rating" type="number"
+                                min="0" max="10" step=".1">
+                        </label>
+
+                        <label>
+                            Problem Solving Rating
+                            <input name="problem_solving_rating" type="number"
+                                min="0" max="10" step=".1">
+                        </label>
+
+                        <label>
+                            Overall Rating
+                            <input name="overall_rating" type="number"
+                                min="0" max="10" step=".1">
+                        </label>
+
+                        <label>
+                            Interview Result
+                            <select name="recommendation">
+                                <option>NEXT_ROUND</option>
+                                <option>SELECTED</option>
+                                <option>REJECTED</option>
+                                <option>ON_HOLD</option>
+                            </select>
+                        </label>
+
+                        <label class="full">
+                            Feedback Remarks
+                            <textarea name="feedback_remarks"></textarea>
+                        </label>
+
+                        <div class="form-actions full">
+                            <button class="btn primary">
+                                Save Feedback
+                            </button>
+                        </div>
+
+                        <div id="feedbackMessage" class="message full"></div>
+
+                    </form>
+
+                    <!-- Create Offer -->
+                    <form id="offerForm" class="panel form-grid compact">
+
+                        <h2 class="full">Create Offer</h2>
+
+                        <label>
+                            Application ID
+                            <input name="application_id" type="number" required>
+                        </label>
+
+                        <label>
+                            Designation
+                            <input name="designation" required>
+                        </label>
+
+                        <label>
+                            Offered Package (LPA)
+                            <input name="offered_package" type="number"
+                                step=".01" required>
+                        </label>
+
+                        <label>
+                            Offer Date
+                            <input name="offer_date" type="date" required>
+                        </label>
+
+                        <label>
+                            Expected Joining Date
+                            <input name="expected_joining_date" type="date">
+                        </label>
+
+                        <div class="form-actions full">
+                            <button class="btn primary">
+                                Create Offer
+                            </button>
+                        </div>
+
+                        <div id="offerMessage" class="message full"></div>
+
+                    </form>
+
+                </div>
+
+                <!-- Offer Status and Placement Confirmation -->
+                <div class="content-grid">
+
+                    <!-- Update Offer Status -->
+                    <form id="offerStatusForm" class="panel form-grid compact">
+
+                        <h2 class="full">Update Offer Status</h2>
+
+                        <label>
+                            Offer ID
+                            <input name="offer_id" type="number" required>
+                        </label>
+
+                        <label>
+                            Status
+                            <select name="offer_status">
+                                <option>OFFERED</option>
+                                <option>ACCEPTED</option>
+                                <option>REJECTED</option>
+                                <option>EXPIRED</option>
+                                <option>WITHDRAWN</option>
+                            </select>
+                        </label>
+
+                        <div class="form-actions full">
+                            <button class="btn primary">
+                                Update Offer
+                            </button>
+                        </div>
+
+                    </form>
+
+                    <!-- Confirm Joining -->
+                    <form id="placementForm" class="panel form-grid compact">
+
+                        <h2 class="full">Confirm Joining</h2>
+
+                        <label>
+                            Offer ID
+                            <input name="offer_id" type="number" required>
+                        </label>
+
+                        <label>
+                            Actual Joining Date
+                            <input name="actual_joining_date" type="date" required>
+                        </label>
+
+                        <label>
+                            Final Package
+                            <input name="final_package" type="number"
+                                step=".01" required>
+                        </label>
+
+                        <label>
+                            Designation
+                            <input name="designation" required>
+                        </label>
+
+                        <div class="form-actions full">
+                            <button class="btn primary">
+                                Mark Placed
+                            </button>
+                        </div>
+
+                        <div id="placementMessage" class="message full"></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+</html>

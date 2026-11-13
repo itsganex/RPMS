@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Form | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Logo -->
+            <a class="brand" href="dashboard.html">
+                <img src="images/kiran-academy-logo.png" alt="Kiran Academy Logo" class="brand-logo">
+            </a>
+
+            <!-- Sidebar Navigation -->
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="candidates.html">Candidates</a>
+                <a href="companies.html">Companies</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="applications.html">Applications</a>
+                <a href="interviews.html">Interviews</a>
+                <a href="placement-process.html">Placement Process</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>
+                    Recruitment & Placement Management System
+                </span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">OPPORTUNITIES</p>
+
+                        <h1>Create Job</h1>
+
+                        <p class="muted">
+                            Define role requirements and eligibility criteria.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Job Creation Form -->
+                <form id="jobForm" class="panel form-grid">
+
+                    <label>
+                        Company ID
+                        <input name="company_id" type="number" required>
+                    </label>
+
+                    <label>
+                        Job Code
+                        <input name="job_code" required>
+                    </label>
+
+                    <label>
+                        Job Title
+                        <input name="job_title" required>
+                    </label>
+
+                    <label>
+                        Number of Openings
+                        <input name="openings" type="number" min="1" required>
+                    </label>
+
+                    <label>
+                        Employment Type
+                        <select name="employment_type">
+                            <option>FULL_TIME</option>
+                            <option>INTERNSHIP</option>
+                            <option>CONTRACT</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Location
+                        <input name="location">
+                    </label>
+
+                    <label>
+                        Minimum Package (LPA)
+                        <input name="min_package" type="number" step=".01">
+                    </label>
+
+                    <label>
+                        Maximum Package (LPA)
+                        <input name="max_package" type="number" step=".01">
+                    </label>
+
+                    <label>
+                        Qualification
+                        <input name="qualification">
+                    </label>
+
+                    <label>
+                        Minimum Percentage
+                        <input name="min_percentage" type="number" min="0" max="100">
+                    </label>
+
+                    <label>
+                        Minimum Passing Year
+                        <input name="min_passing_year" type="number">
+                    </label>
+
+                    <label>
+                        Maximum Passing Year
+                        <input name="max_passing_year" type="number">
+                    </label>
+
+                    <label>
+                        Maximum Backlogs
+                        <input name="max_backlogs" type="number" min="0" value="0">
+                    </label>
+
+                    <label>
+                        Experience Required
+                        <input name="experience_required" placeholder="Fresher">
+                    </label>
+
+                    <label>
+                        Required Technology
+                        <input name="required_technology">
+                    </label>
+
+                    <label>
+                        Posted Date
+                        <input name="posted_date" type="date" required>
+                    </label>
+
+                    <label>
+                        Application Deadline
+                        <input name="application_deadline" type="date" required>
+                    </label>
+
+                    <label>
+                        Status
+                        <select name="job_status">
+                            <option>OPEN</option>
+                            <option>DRAFT</option>
+                            <option>CLOSED</option>
+                        </select>
+                    </label>
+
+                    <!-- Form Actions -->
+                    <div class="form-actions full">
+
+                        <button class="btn primary">
+                            Save Job
+                        </button>
+
+                        <a class="btn secondary" href="jobs.html">
+                            Cancel
+                        </a>
+
+                    </div>
+
+                    <div id="message" class="message full"></div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+
+</html>

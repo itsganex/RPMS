@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jobs | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Branding -->
+            <a class="brand" href="dashboard.html">
+                <img src="images/kiran-academy-logo.png" alt="Kiran Academy Logo" class="brand-logo">
+            </a>
+
+            <!-- Navigation -->
+            <nav>
+                <a href="dashboard.html" class="">Dashboard</a>
+                <a href="candidates.html" class="">Candidates</a>
+                <a href="companies.html" class="">Companies</a>
+                <a href="jobs.html" class="active">Jobs</a>
+                <a href="applications.html" class="">Applications</a>
+                <a href="interviews.html" class="">Interviews</a>
+                <a href="placement-process.html" class="">Placement Process</a>
+                <a href="reports.html" class="">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>Recruitment & Placement Management System</span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">OPPORTUNITIES</p>
+                        <h1>Job Openings</h1>
+                        <p class="muted">
+                            Track active hiring requirements.
+                        </p>
+                    </div>
+
+                    <a class="btn primary" href="job-form.html">
+                        + Create Job
+                    </a>
+                </div>
+
+                <!-- Jobs Table -->
+                <section class="panel">
+
+                    <div class="toolbar">
+                        <input id="jobSearch" placeholder="Search job title, company or technology">
+
+                        <button class="btn secondary" id="jobSearchBtn">
+                            Search
+                        </button>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Job Code</th>
+                                    <th>Company</th>
+                                    <th>Title</th>
+                                    <th>Openings</th>
+                                    <th>Location</th>
+                                    <th>Package (LPA)</th>
+                                    <th>Min %</th>
+                                    <th>Max Backlogs</th>
+                                    <th>Deadline</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="jobRows"></tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+
+</html>

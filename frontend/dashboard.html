@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Logo -->
+            <a class="brand" href="dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <!-- Sidebar Navigation -->
+            <nav>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="candidates.html">Candidates</a>
+                <a href="companies.html">Companies</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="applications.html">Applications</a>
+                <a href="interviews.html">Interviews</a>
+                <a href="placement-process.html">Placement Process</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>
+                    Recruitment & Placement Management System
+                </span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">OVERVIEW</p>
+
+                        <h1>Dashboard</h1>
+
+                        <p class="muted">
+                            Your recruitment activity at a glance.
+                        </p>
+                    </div>
+
+                    <a class="btn primary" href="candidate-form.html">
+                        + Add Candidate
+                    </a>
+
+                </div>
+
+                <!-- Dashboard Statistics -->
+                <div class="stats-grid" id="stats">
+
+                    <div class="stat">
+                        <span>Total Candidates</span>
+                        <strong data-stat="total_candidates">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Active Candidates</span>
+                        <strong data-stat="active_candidates">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Companies</span>
+                        <strong data-stat="companies">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Open Jobs</span>
+                        <strong data-stat="open_jobs">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Applications</span>
+                        <strong data-stat="applications">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Interviews</span>
+                        <strong data-stat="interviews">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Selected</span>
+                        <strong data-stat="selected">—</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Placed</span>
+                        <strong data-stat="placed">—</strong>
+                    </div>
+
+                </div>
+
+                <!-- Recruitment Funnel and Upcoming Interviews -->
+                <div class="content-grid">
+
+                    <section class="panel">
+
+                        <div class="panel-head">
+                            <h2>Recruitment Funnel</h2>
+                        </div>
+
+                        <div id="funnel" class="funnel"></div>
+
+                    </section>
+
+                    <section class="panel">
+
+                        <div class="panel-head">
+                            <h2>Upcoming Interviews</h2>
+                            <a href="interviews.html">View all</a>
+                        </div>
+
+                        <div id="upcoming" class="table-wrap">
+                            <p class="muted">Loading…</p>
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <!-- Quick Actions -->
+                <section class="panel">
+
+                    <div class="panel-head">
+                        <h2>Quick Actions</h2>
+                    </div>
+
+                    <div class="quick-links">
+
+                        <a href="candidates.html">
+                            Manage candidates
+                        </a>
+
+                        <a href="jobs.html">
+                            View job openings
+                        </a>
+
+                        <a href="applications.html">
+                            Review applications
+                        </a>
+
+                        <a href="reports.html">
+                            Open reports
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+</html>

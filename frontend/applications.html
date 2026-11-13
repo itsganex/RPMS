@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Applications | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Logo -->
+            <a class="brand" href="dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <!-- Sidebar Navigation -->
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="candidates.html">Candidates</a>
+                <a href="companies.html">Companies</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="applications.html" class="active">Applications</a>
+                <a href="interviews.html">Interviews</a>
+                <a href="placement-process.html">Placement Process</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>
+                    Recruitment & Placement Management System
+                </span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">WORKFLOW</p>
+
+                        <h1>Applications</h1>
+
+                        <p class="muted">
+                            Check eligibility and move applications through controlled stages.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Application Management -->
+                <section class="panel">
+
+                    <form id="applyForm" class="toolbar">
+
+                        <input
+                            name="candidate_id"
+                            type="number"
+                            placeholder="Candidate ID"
+                            required
+                        >
+
+                        <input
+                            name="job_id"
+                            type="number"
+                            placeholder="Job ID"
+                            required
+                        >
+
+                        <button
+                            class="btn secondary"
+                            type="button"
+                            id="eligibilityBtn"
+                        >
+                            Check Eligibility
+                        </button>
+
+                        <button class="btn primary">
+                            Apply for Job
+                        </button>
+
+                    </form>
+
+                    <!-- Eligibility Result -->
+                    <div id="eligibilityResult" class="message"></div>
+
+                    <!-- Applications Table -->
+                    <div class="table-wrap">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Application ID</th>
+                                    <th>Candidate</th>
+                                    <th>Company</th>
+                                    <th>Job</th>
+                                    <th>Eligibility</th>
+                                    <th>Reason</th>
+                                    <th>Status</th>
+                                    <th>Applied</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="applicationRows"></tbody>
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+</html>

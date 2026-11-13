@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | RPMS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+    <section class="login-card">
+
+        <img
+            src="images/kiran-academy-logo.png"
+            alt="Kiran Academy Logo"
+            class="brand-logo"
+        >
+
+        <p class="eyebrow">KIRAN ACADEMY</p>
+
+        <h1>Recruitment & Placement</h1>
+
+        <p class="muted">
+            Sign in to manage your recruitment workflow.
+        </p>
+
+        <form id="loginForm">
+
+            <label>
+                Username / Email / Mobile
+                <input
+                    type="text"
+                    name="identifier"
+                    placeholder="Enter username, email or 10-digit mobile number"
+                    required>
+            </label>
+
+            <label>
+                Password
+
+                <div class="password-wrap">
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Enter password"
+                        required>
+
+                    <button
+                        type="button"
+                        class="icon-btn"
+                        id="togglePassword">
+                        Show
+                    </button>
+                </div>
+            </label>
+
+            <label>
+                Role
+
+                <select name="role" required>
+                    <option value="">Select role</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="RECRUITER">RECRUITER</option>
+                    <option value="PLACEMENT_OFFICER">
+                        PLACEMENT OFFICER
+                    </option>
+                    <option value="STUDENT">STUDENT</option>
+                </select>
+            </label>
+
+            <div class="form-actions">
+
+                <button class="btn primary" type="submit">
+                    Sign In
+                </button>
+
+                <button class="btn secondary" type="reset">
+                    Reset
+                </button>
+
+            </div>
+
+        </form>
+
+        <div class="login-footer">
+
+            <a href="#" class="forgot-link">
+                Forgot password?
+            </a>
+
+            <a href="/register.html"
+               class="btn secondary register-button">
+                Create Student Account
+            </a>
+
+        </div>
+
+        <div id="message" class="message"></div>
+
+    </section>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

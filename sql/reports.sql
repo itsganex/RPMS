@@ -1,0 +1,13 @@
+USE rpms_db;
+SELECT primary_technology,COUNT(*) candidate_count FROM candidates GROUP BY primary_technology ORDER BY candidate_count DESC;
+SELECT c.company_name,COUNT(*) open_jobs FROM jobs j JOIN companies c ON c.company_id=j.company_id WHERE j.job_status='OPEN' GROUP BY c.company_id,c.company_name;
+SELECT application_status,COUNT(*) total FROM applications GROUP BY application_status;
+SELECT application_status,COUNT(*) candidate_count FROM applications GROUP BY application_status ORDER BY FIELD(application_status,'APPLIED','ELIGIBILITY_VERIFIED','SHORTLISTED','INTERVIEW_SCHEDULED','INTERVIEWED','SELECTED','OFFERED','JOINED');
+SELECT co.company_name,COUNT(p.placement_id) placed_count FROM placements p JOIN companies co ON co.company_id=p.company_id WHERE p.joining_status='JOINED' GROUP BY co.company_id,co.company_name ORDER BY placed_count DESC;
+SELECT c.primary_technology,COUNT(p.placement_id) placed_count FROM placements p JOIN candidates c ON c.candidate_id=p.candidate_id WHERE p.joining_status='JOINED' GROUP BY c.primary_technology;
+SELECT u.full_name recruiter,COUNT(a.application_id) applications,SUM(a.application_status IN ('SELECTED','OFFERED','JOINED')) progressed FROM users u LEFT JOIN applications a ON a.assigned_recruiter_id=u.user_id GROUP BY u.user_id,u.full_name;
+SELECT i.*,c.full_name,j.job_title,co.company_name FROM interview_rounds i JOIN applications a ON a.application_id=i.application_id JOIN candidates c ON c.candidate_id=a.candidate_id JOIN jobs j ON j.job_id=a.job_id JOIN companies co ON co.company_id=j.company_id WHERE i.interview_status IN ('SCHEDULED','RESCHEDULED') ORDER BY i.interview_date;
+SELECT COUNT(DISTINCT o.offer_id) total_offers,COUNT(DISTINCT p.placement_id) joined,ROUND(100*COUNT(DISTINCT p.placement_id)/NULLIF(COUNT(DISTINCT o.offer_id),0),2) conversion_percent FROM offers o LEFT JOIN placements p ON p.offer_id=o.offer_id AND p.joining_status='JOINED';
+SELECT job_code,job_title,DATEDIFF(CURDATE(),posted_date) age_days,job_status FROM jobs ORDER BY age_days DESC;
+SELECT c.candidate_code,c.full_name,co.company_name,p.designation,p.final_package,p.actual_joining_date FROM placements p JOIN candidates c ON c.candidate_id=p.candidate_id JOIN companies co ON co.company_id=p.company_id WHERE p.joining_status='JOINED';
+SELECT candidate_code,full_name,qualification,primary_technology,passing_year FROM candidates WHERE placement_status='NOT_PLACED' AND profile_status='ACTIVE';

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interviews | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+
+            <!-- Kiran Academy Logo -->
+            <a class="brand" href="dashboard.html">
+                <img
+                    src="images/kiran-academy-logo.png"
+                    alt="Kiran Academy Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <!-- Sidebar Navigation -->
+            <nav>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="candidates.html">Candidates</a>
+                <a href="companies.html">Companies</a>
+                <a href="jobs.html">Jobs</a>
+                <a href="applications.html">Applications</a>
+                <a href="interviews.html" class="active">Interviews</a>
+                <a href="placement-process.html">Placement Process</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+
+            <div class="sidebar-foot">
+                Kiran Academy
+                <br>
+                <small>Recruitment & Placement</small>
+            </div>
+
+        </aside>
+
+        <main class="main-area">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <button id="menuToggle" class="icon-btn">☰</button>
+
+                <span>
+                    Recruitment & Placement Management System
+                </span>
+
+                <div class="user-menu">
+                    <span id="currentUser">Authorized User</span>
+
+                    <button id="logoutBtn" class="btn secondary small">
+                        Logout
+                    </button>
+                </div>
+
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+
+                <div class="page-heading">
+                    <div>
+                        <p class="eyebrow">WORKFLOW</p>
+
+                        <h1>Interviews</h1>
+
+                        <p class="muted">
+                            Schedule and track interview rounds.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Interview Scheduling Form -->
+                <form id="interviewForm" class="panel form-grid compact">
+
+                    <label>
+                        Application ID
+                        <input name="application_id" type="number" required>
+                    </label>
+
+                    <label>
+                        Round Number
+                        <input name="round_number" type="number" min="1" required>
+                    </label>
+
+                    <label>
+                        Interview Round
+                        <select name="round_type">
+                            <option>APTITUDE</option>
+                            <option>TECHNICAL</option>
+                            <option>MANAGERIAL</option>
+                            <option>HR</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Interview Date
+                        <input name="interview_date" type="date" required>
+                    </label>
+
+                    <label>
+                        Interview Time
+                        <input name="interview_time" type="time">
+                    </label>
+
+                    <label>
+                        Mode
+                        <select name="mode">
+                            <option>ONLINE</option>
+                            <option>OFFLINE</option>
+                            <option>TELEPHONIC</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Interviewer Name
+                        <input name="interviewer_name">
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="btn primary">
+                            Schedule Interview
+                        </button>
+                    </div>
+
+                    <div id="message" class="message full"></div>
+
+                </form>
+
+                <!-- Upcoming Interviews -->
+                <section class="panel">
+
+                    <h2>Today's & Upcoming Interviews</h2>
+
+                    <div class="table-wrap">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Candidate</th>
+                                    <th>Company</th>
+                                    <th>Job</th>
+                                    <th>Round</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Mode</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="interviewRows"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+
+</body>
+</html>

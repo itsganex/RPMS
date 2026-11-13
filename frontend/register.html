@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | RPMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <!-- Registration Header -->
+        <div class="register-header">
+            <img
+                src="images/kiran-academy-logo.png"
+                alt="Kiran Academy Logo"
+                class="brand-logo"
+            >
+            <p class="subtitle">RECRUITMENT & PLACEMENT MANAGEMENT SYSTEM</p>
+            <h1>Create Student Account</h1>
+            <p>Register yourself for college recruitment and placement opportunities.</p>
+        </div>
+
+        <form id="registerForm">
+
+            <!-- PERSONAL INFORMATION -->
+            <h3>Personal Information</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="full_name"
+                        placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date of Birth *</label>
+                    <input type="date" name="date_of_birth" id="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="number" id="age"
+                        placeholder="Calculated automatically" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <select name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Parent / Guardian Name *</label>
+                    <input type="text" name="parent_guardian_name"
+                        placeholder="Enter parent/guardian name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Mobile Number *</label>
+                    <input type="tel" name="mobile"
+                        placeholder="Enter 10-digit mobile number"
+                        pattern="[0-9]{10}" maxlength="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="email"
+                        placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Current Location</label>
+                    <input type="text" name="current_location"
+                        placeholder="City / District">
+                </div>
+
+            </div>
+
+            <!-- ACADEMIC INFORMATION -->
+            <h3>Academic Information</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Course *</label>
+                    <select name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="B.E.">B.E.</option>
+                        <option value="BCA">BCA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="Diploma">Diploma</option>
+                        <option value="B.Sc">B.Sc</option>
+                        <option value="B.Com">B.Com</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Branch / Specialisation *</label>
+                    <input type="text" name="branch"
+                        placeholder="e.g. Computer Technology" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Class / Grade *</label>
+                    <select name="class_grade" required>
+                        <option value="">Select Class / Year</option>
+                        <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Final Year">Final Year</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Current Semester</label>
+                    <select name="semester">
+                        <option value="">Select Semester</option>
+                        <option value="1">Semester 1</option>
+                        <option value="2">Semester 2</option>
+                        <option value="3">Semester 3</option>
+                        <option value="4">Semester 4</option>
+                        <option value="5">Semester 5</option>
+                        <option value="6">Semester 6</option>
+                        <option value="7">Semester 7</option>
+                        <option value="8">Semester 8</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>College Name *</label>
+                    <input type="text" name="college"
+                        placeholder="Enter college name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>University Name</label>
+                    <input type="text" name="university"
+                        placeholder="Enter university name">
+                </div>
+
+                <div class="form-group">
+                    <label>Passing Year *</label>
+                    <input type="number" name="passing_year"
+                        min="1990" max="2100"
+                        placeholder="e.g. 2028" required>
+                </div>
+
+                <div class="form-group">
+                    <label>10th Percentage</label>
+                    <input type="number" name="tenth_percentage"
+                        min="0" max="100" step="0.01"
+                        placeholder="e.g. 75.50">
+                </div>
+
+                <div class="form-group">
+                    <label>12th / Diploma Percentage</label>
+                    <input type="number" name="twelfth_percentage"
+                        min="0" max="100" step="0.01"
+                        placeholder="e.g. 65.50">
+                </div>
+
+                <div class="form-group">
+                    <label>Graduation Percentage</label>
+                    <input type="number" name="percentage"
+                        min="0" max="100" step="0.01"
+                        placeholder="e.g. 70.50">
+                </div>
+
+                <div class="form-group">
+                    <label>CGPA</label>
+                    <input type="number" name="cgpa"
+                        min="0" max="10" step="0.01"
+                        placeholder="e.g. 8.25">
+                </div>
+
+                <div class="form-group">
+                    <label>Active Backlogs</label>
+                    <input type="number" name="backlog_count"
+                        min="0" value="0">
+                </div>
+
+            </div>
+
+            <!-- TECHNICAL SKILLS -->
+            <h3>Technical Skills</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Primary Technology</label>
+                    <input type="text" name="primary_technology"
+                        placeholder="Python, Java, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label>Secondary Skills</label>
+                    <input type="text" name="secondary_skills"
+                        placeholder="HTML, CSS, JavaScript, SQL">
+                </div>
+
+                <div class="form-group">
+                    <label>Programming Languages</label>
+                    <input type="text" name="programming_languages"
+                        placeholder="Python, Java, C">
+                </div>
+
+                <div class="form-group">
+                    <label>Frameworks / Libraries</label>
+                    <input type="text" name="frameworks"
+                        placeholder="Flask, Django, React">
+                </div>
+
+                <div class="form-group">
+                    <label>Database Knowledge</label>
+                    <input type="text" name="database_skills"
+                        placeholder="MySQL, MongoDB, etc.">
+                </div>
+
+                <div class="form-group">
+                    <label>Skill Level</label>
+                    <select name="skill_level">
+                        <option value="">Select Skill Level</option>
+                        <option value="BEGINNER">Beginner</option>
+                        <option value="INTERMEDIATE">Intermediate</option>
+                        <option value="ADVANCED">Advanced</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- PLACEMENT PREFERENCES -->
+            <h3>Placement Preferences</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Preferred Job Role</label>
+                    <input type="text" name="preferred_job_role"
+                        placeholder="Python Developer, Software Developer">
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Job Location</label>
+                    <input type="text" name="preferred_location"
+                        placeholder="Pune, Mumbai, Bengaluru">
+                </div>
+
+                <div class="form-group">
+                    <label>Expected Salary (LPA)</label>
+                    <input type="number" name="expected_salary"
+                        min="0" step="0.1" placeholder="e.g. 4.5">
+                </div>
+
+                <div class="form-group">
+                    <label>Willing to Relocate?</label>
+                    <select name="willing_to_relocate">
+                        <option value="">Select Option</option>
+                        <option value="YES">Yes</option>
+                        <option value="NO">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Internship Experience</label>
+                    <select name="internship_experience">
+                        <option value="">Select Option</option>
+                        <option value="YES">Yes</option>
+                        <option value="NO">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Work Experience</label>
+                    <input type="text" name="work_experience"
+                        placeholder="Fresher / Experience details">
+                </div>
+
+            </div>
+
+            <!-- ACCOUNT INFORMATION -->
+            <h3>Account Information</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Create Password *</label>
+                    <input type="password" name="password"
+                        id="password"
+                        placeholder="Create a password"
+                        minlength="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm Password *</label>
+                    <input type="password" name="confirm_password"
+                        id="confirm_password"
+                        placeholder="Confirm your password"
+                        minlength="8" required>
+                </div>
+
+            </div>
+
+            <p class="form-note">
+                You can log in later using your registered email address
+                or mobile number and password.
+            </p>
+
+            <!-- MESSAGE -->
+            <div id="message" class="message" aria-live="polite"></div>
+
+            <!-- FORM ACTIONS -->
+            <div class="form-actions">
+
+                <button type="submit" id="registerButton" class="btn primary">
+                    Register Now
+                </button>
+
+                <a href="login.html" class="btn secondary back-button">
+                    Back to Login
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+        // Automatically calculate age from date of birth
+        const dobInput = document.getElementById("dob");
+        const ageInput = document.getElementById("age");
+
+        dobInput.addEventListener("change", function () {
+            if (!this.value) {
+                ageInput.value = "";
+                return;
+            }
+
+            const birthDate = new Date(this.value + "T00:00:00");
+            const today = new Date();
+
+            let age = today.getFullYear() - birthDate.getFullYear();
+
+            const birthdayNotReached =
+                today.getMonth() < birthDate.getMonth() ||
+                (today.getMonth() === birthDate.getMonth() &&
+                    today.getDate() < birthDate.getDate());
+
+            if (birthdayNotReached) {
+                age--;
+            }
+
+            ageInput.value = age >= 0 ? age : "";
+        });
+
+        // Prevent selecting a future date of birth
+        dobInput.max = new Date().toISOString().split("T")[0];
+    </script>
+
+    <script src="js/register.js"></script>
+
+</body>
+</html>
